@@ -13,7 +13,36 @@
 #Installing required libraries for DCT
 
 -pip install numpy opencv-python matplotlib scipy
+# LSB Algorithm
 
+## 1. Converting the Message to Binary Format  
+Represent the message you want to hide in ASCII codes or directly in binary format. For example, the message "hello" could be represented as:
+
+h: 01101000
+e: 01100101
+l: 01101100
+l: 01101100
+o: 01101111
+
+## 2. Selecting an Image  
+Choose an image to hide the message in (PNG or BMP formats are preferred because they do not use lossy compression).
+
+## 3. Hiding the Message in the LSBs of Pixels  
+Examine each pixel of the image (in RGB format, each pixel has 3 channels: Red, Green, and Blue).
+
+The Least Significant Bit (LSB) of each channel is modified, and one bit of the message you want to hide is written into it.
+
+Repeat this process for each pixel and channel.
+
+## 4. Creating the New Image  
+After placing all the message bits into the LSBs of each pixel, create a new image. The image will usually show no visible change, as only the LSBs have been altered.
+
+## 5. Extracting the Message (Decoding)  
+To extract the hidden message, read the LSB of each pixel.
+
+Combine the LSBs you read to retrieve the original hidden message.
+
+These steps form the basic logic of the LSB steganography process.
 # JPEG Algorithm (DCT)
 
 **Converting the Image to Grayscale:**  
