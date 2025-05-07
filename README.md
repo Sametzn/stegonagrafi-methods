@@ -5,3 +5,7 @@
 - BPCS (Bit Plane Complexity Segmentation) Algorithm
 - Masking and Filtering Methods
 - Heuristic Steganalysis Methods
+
+#Installing required libraries
+
+pip install pillow  
