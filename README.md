@@ -1,7 +1,7 @@
-# Steganografi Yöntemleri
+# Steganography Methods
 
-- LSB (En Düşük Anlamlı Bit Ekleme) Algoritması
-- JPEG Algoritması (DCT)
-- BPCS (Bit Düzeyinde Karmaşıklık Segmentasyonu) Algoritması
-- Maskeleme ve Filtreleme Yöntemleri
-- Sezgisel Steganaliz Yöntemleri
+- LSB (Least Significant Bit Insertion) Algorithm
+- JPEG Algorithm (DCT)
+- BPCS (Bit Plane Complexity Segmentation) Algorithm
+- Masking and Filtering Methods
+- Heuristic Steganalysis Methods
