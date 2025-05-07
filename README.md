@@ -6,6 +6,10 @@
 - Masking and Filtering Methods
 - Heuristic Steganalysis Methods
 
-#Installing required libraries
+#Installing required libraries for LSB
 
-pip install pillow  
+-pip install pillow  
+
+#Installing required libraries for DCT
+-pip install numpy opencv-python matplotlib
+
