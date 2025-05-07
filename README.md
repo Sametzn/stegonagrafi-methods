@@ -59,3 +59,30 @@ To reverse the DCT, the `np.fft.idct` function is used. This process reconstruct
 
 ## 5. Visualizing the Images  
 Finally, the original image and the reconstructed image after the DCT process are displayed side by side.
+# BPCS Algorithm
+
+## 1. Converting the Image to Binary Format  
+The image is first converted to grayscale (to use only the luminance information). Then, this grayscale image is transformed into a binary format, with each pixel represented by an 8-bit binary value.
+
+## 2. Bit Plane Decomposition  
+The grayscale image is decomposed into bit planes. That is, each bit of every pixel is extracted into a separate plane. For example, each bit of an 8-bit pixel can be stored on a separate plane:
+
+- Bit 7 (Most Significant Bit - MSB)
+- Bit 6
+- Bit 5
+- ...
+- Bit 0 (Least Significant Bit - LSB)
+
+## 3. Bit Plane Complexity Calculation  
+For each bit plane, it’s important to calculate the complexity of that plane. Complexity is a measure of the variability in that bit plane. High complexity means more variability and more information. Low complexity means a more homogeneous area.
+
+## 4. Classifying and Segmenting Bit Planes  
+High complexity bit planes (those with more variability) are selected as areas for embedding the message.
+
+Low complexity bit planes are used as the carrier for the hidden message.
+
+## 5. Hiding the Message  
+The message you want to hide is added to the low complexity bit planes. In this step, the binary data of the hidden message is written into specific bits of these low complexity bit planes.
+
+## 6. Reconstructing the New Image  
+The new image is reconstructed with the hidden message. This image appears similar to the original image but contains the hidden message.
